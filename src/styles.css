@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* @import "node_modules/swiper/swiper-bundle.min.css"; */
+
+body {
+  overflow-x: hidden !important;
+}
+@font-face {
+  font-family: "Agrandir";
+  src: url("/fonts/Agrandir-TextBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir";
+  src: url("/fonts/Agrandir-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Abel";
+  src: url("/fonts/Abel-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    transition: 0.4s ease-in-out;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #000;
+    transition: 0.4s ease-in-out;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #ffa800;
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #ffa800;
+    transition: 0.4s ease-in-out;
+  }
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none !important;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+.swiper-button-lock {
+  display: flex;
+}
+.text-gradient {
+  background: linear-gradient(
+    264deg,
+    #9de8ee 0%,
+    #d1ab6f 39.41%,
+    #f17d21 78.57%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+img {
+  user-select: none;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+}
+
+.marquee__content li {
+  margin-right: 20px;
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.enable-animation {
+  margin-bottom: 20px;
+}
+.enable-animation .marquee__content {
+  animation: scroll-right 55s linear infinite;
+}
+.enable-animation-l .marquee__content {
+  animation: scroll-left 60s linear infinite;
+}
+header {
+  backdrop-filter: blur(18px);
+  background-color: rgba(15, 15, 15, 0.4);
+}
+.shadow-el {
+  position: absolute;
+  width: 611px;
+  height: 455px;
+  left: -100px;
+  right: auto;
+  top: 555px;
+  filter: blur(110px);
+  transform: rotate(23deg);
+  background: rgb(255, 155, 98);
+}
+.shadow-el2 {
+  position: absolute;
+  width: 659px;
+  height: 515px;
+  right: -185px;
+  top: -220px;
+  filter: blur(100px);
+  transform: rotate(26deg);
+  background: rgb(139, 123, 207);
+}
+.shadow-el3 {
+  position: absolute;
+  width: 605px;
+  height: 160px;
+  left: -18px;
+  right: auto;
+  top: 117px;
+  filter: blur(53px);
+  transform: rotate(191deg);
+  background: rgb(255, 155, 98);
+}
+.shadow-el4 {
+  position: absolute;
+  width: 270px;
+  height: 216px;
+  right: -33px;
+  top: -66px;
+  filter: blur(66px);
+  transform: rotate(120deg);
+  background: rgb(139, 123, 207);
+}
+@media (max-width: 1024px) {
+  .shadow-el,
+  .shadow-el2,
+  .shadow-el3,
+  .shadow-el4 {
+    display: none;
+  }
+}
+.open {
+  right: 0 !important;
+}
+.blur {
+  backdrop-filter: blur(18px);
+  background-color: rgba(15, 15, 15, 0.4);
+}
+@media (max-width: 992px) {
+  .nav {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+  }
+}
+.fixed-body {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  header {
+    width: 100vw;
+  }
+  html {
+    overflow-x: hidden;
+  }
+}
+html {
+  overflow-x: hidden;
+}
+@media (min-width: 320px) {
+  .text {
+    min-height: 120px;
+  }
+}
+@media (min-width: 390px) {
+  .text {
+    min-height: 80px;
+  }
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+  to {
+    opacity: 1;
+    transition: opacity 400ms;
+  }
+}
+h1.h1 span {
+  color: red !important;
+}
+h1::after {
+  content: " |";
+  animation: blink 800ms infinite;
+}
