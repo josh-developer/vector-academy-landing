@@ -3,6 +3,7 @@ import { Component, inject, OnInit, PLATFORM_ID, signal } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { RouterLink } from '@angular/router';
 import * as AOS from 'aos';
+import { delay } from 'rxjs';
 
 declare const Swiper: any;
 
@@ -30,6 +31,10 @@ export default class MainComponent implements OnInit {
   swiperInit(): void {
     const swiper = new Swiper('.swiper', {
       // Optional parameters
+      speed: 700,
+      autoplay: {
+        delay: 4000,
+      },
       loop: true,
       grabCursor: true,
       slidesPerView: 2,

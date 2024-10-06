@@ -1,31 +1,19 @@
 <div class="flex min-h-screen flex-col">
   <main class="pt-24">
-    <section
-      class="bg-quadro bg-cover bg-center bg-no-repeat sm:mb-8 md:relative md:mb-0 xl:h-[650px]"
-    >
-      <div
-        class="mx-auto xl:container sm:px-5 sm:pt-10 lg:px-4 lg:pt-32 xl:px-0"
-      >
-        <div
-          class="md:flex md:justify-start"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+    <section class="bg-quadro bg-cover bg-center bg-no-repeat sm:mb-8 md:relative md:mb-0 xl:h-[650px]">
+      <div class="mx-auto xl:container sm:px-5 sm:pt-10 lg:px-4 lg:pt-32 xl:px-0">
+        <div class="md:flex md:justify-start" data-aos="fade-up" data-aos-duration="1000">
           <div class="sm:w-auto md:w-[580px]">
             <article>
               <h1>
                 <div class="mb-4 font-main text-2xl font-bold text-orange">
                   Kurs haqida
                 </div>
-                <div
-                  class="mb-4 font-main font-bold text-white sm:text-3xl lg:text-7xl"
-                >
+                <div class="mb-4 font-main font-bold text-white sm:text-3xl lg:text-7xl">
                   {{ item()?.name }}
                 </div>
               </h1>
-              <p
-                class="font-main text-base font-normal -tracking-tight text-white opacity-60"
-              >
+              <p class="font-main text-base font-normal -tracking-tight text-white opacity-60">
                 {{ item()?.description }}
               </p>
             </article>
@@ -38,11 +26,7 @@
     <section class="relative z-10 bg-main pb-4 pt-8">
       <div class="mx-auto xl:container md:px-5">
         <div class="mb-5 gap-4 sm:grid sm:grid-cols-1 lg:grid-cols-2">
-          <article
-            class="rounded-md bg-mentorbg px-6 py-9"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
+          <article class="rounded-md bg-mentorbg px-6 py-9" data-aos="fade-right" data-aos-duration="1000">
             <h3 class="mb-4 font-main text-2xl font-bold text-white">
               Bizning "{{ item()?.type }}" kursimiz:
             </h3>
@@ -73,23 +57,13 @@
               </li>
             </ul>
           </article>
-          <article
-            class="rounded-md bg-mentorbg px-6 py-9"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
+          <article class="rounded-md bg-mentorbg px-6 py-9" data-aos="fade-left" data-aos-duration="1000">
             <div class="flex justify-start">
               <div class="mr-4 h-14 w-14 overflow-hidden rounded-full">
                 @if(item()?.mentor?.image) {
-                <img
-                  src="./images/png/user2.png"
-                  class="h-full w-full object-contain object-top"
-                  alt=""
-                />
+                <img src="./images/png/user2.png" class="h-full w-full object-contain object-top" alt="" />
                 } @else {
-                <div
-                  class="h-full w-full flex justify-center items-center bg-gray-300 font-bold rounded-full"
-                >
+                <div class="h-full w-full flex justify-center items-center bg-gray-300 font-bold rounded-full">
                   {{ item()?.mentor?.fullname?.[0] }}
                 </div>
                 }
@@ -103,20 +77,12 @@
                 </div>
               </div>
             </div>
-            <ul
-              class="w-full mb-8 flex justify-center sm:flex-wrap sm:gap-y-5 lg:flex-nowrap"
-            >
+            <ul class="w-full mb-8 flex justify-center sm:flex-wrap sm:gap-y-5 lg:flex-nowrap">
               @for(media of item()?.mentor?.socialMedia; track media.altText) {
 
               <li class="mr-8">
-                <a
-                  class="block h-9 w-9 duration-150 hover:scale-x-110 hover:scale-y-110"
-                  [href]="media.href"
-                  ><img
-                    class="h-full w-full object-contain"
-                    [src]="media.imageSrc"
-                    [alt]="media.altText"
-                /></a>
+                <a class="block h-9 w-9 duration-150 hover:scale-x-110 hover:scale-y-110" [href]="media.href"><img
+                    class="h-full w-full object-contain" [src]="media.imageSrc" [alt]="media.altText" /></a>
               </li>
               }
             </ul>
@@ -124,26 +90,16 @@
               @for(company of item()?.mentor?.prevCompanies; track company.name)
               {
               <li
-                class="flex items-center justify-center overflow-hidden rounded-lg border border-brzinc p-4 duration-150 hover:border-orange"
-              >
-                <img
-                  [src]="company.logo"
-                  [alt]="company.name"
-                  [title]="company.name"
-                />
+                class="flex items-center justify-center overflow-hidden rounded-lg border border-brzinc p-4 duration-150 hover:border-orange">
+                <img [src]="company.logo" [alt]="company.name" [title]="company.name" />
               </li>
               }
             </ul>
           </article>
         </div>
         <div class="sm:flex sm:justify-center lg:justify-start">
-          <a
-            class="inline-block rounded-3xl border border-solid border-orange bg-orange px-6 py-2 font-main text-sm font-bold uppercase not-italic text-black duration-150 hover:opacity-85"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            href="#!"
-            ><span class="align-sub">join</span></a
-          >
+          <a class="inline-block rounded-3xl border border-solid border-orange bg-orange px-6 py-2 font-main text-sm font-bold uppercase not-italic text-black duration-150 hover:opacity-85"
+            data-aos="fade-right" data-aos-duration="1000" href="#!"><span class="align-sub">so'rov yuborish</span></a>
         </div>
       </div>
     </section>
