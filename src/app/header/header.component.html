@@ -1,0 +1,82 @@
+<header
+class="fixed left-0 right-0 top-0 z-30 lg:w-full"
+data-aos="fade-down"
+data-aos-duration="1000"
+>
+<div class="mx-auto xl:container lg:px-4 xl:px-0">
+  <div
+    class="sm:relative sm:flex sm:flex-col sm:justify-between sm:px-4 sm:py-6 lg:flex-row lg:items-center lg:px-0"
+  >
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a href="index.html" class="block sm:h-5 sm:w-20 lg:h-7 lg:w-32">
+        <img
+          class="h-full w-full object-contain"
+          src="./images/svg/logo.svg"
+          alt="Vektor IT Academy Logotipi"
+        />
+      </a>
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu"
+        role="navigation"
+        class="tham tham-e-squeeze tham-w-6 lg:hidden"
+        (click)="onBurgerClick()"
+      >
+        <div class="tham-box">
+          <div class="tham-inner bg-white"></div>
+        </div>
+      </button>
+    </div>
+    <nav
+      class="nav z-10 duration-300 sm:absolute sm:-right-full sm:top-16 sm:w-full sm:px-4 sm:py-6 lg:static lg:w-auto lg:px-0 lg:py-0"
+    >
+      <ul class="sm:flex sm:flex-col lg:flex-row lg:items-center">
+        <li class="sm:mb-6 lg:mb-0 lg:mr-6">
+          <a
+            id="a"
+            onmouseover="hover(a)"
+            onmouseout="normal(a)"
+            class="flex items-center font-main text-base font-bold capitalize not-italic tracking-wide text-white"
+            href="#!"
+            ><span>Company</span>
+            <span
+              ><img
+                class="ml-1 h-5 w-5 object-contain"
+                src="./images/svg/b-arrow.svg"
+                alt=""
+            /></span>
+          </a>
+        </li>
+        <li class="sm:mb-6 lg:mb-0 lg:mr-6">
+          <a
+            id="a2"
+            onmouseover="hover(a2)"
+            onmouseout="normal(a2)"
+            class="font-main text-base font-bold capitalize not-italic tracking-wide text-white"
+            href="about.html"
+            >Services</a
+          >
+        </li>
+        <li class="sm:mb-6 lg:mb-0 lg:mr-6">
+          <a
+            id="a3"
+            onmouseover="hover(a3)"
+            onmouseout="normal(a3)"
+            class="font-main text-base font-bold capitalize not-italic tracking-wide text-white"
+            href="singel.html"
+            >resources</a
+          >
+        </li>
+        <li>
+          <a
+            class="inline-block rounded-3xl border-2 border-solid border-orange px-6 py-2 font-main text-sm font-bold uppercase not-italic tracking-wide text-orange duration-150 hover:bg-orange hover:text-black"
+            href="#!"
+            ><span class="align-sub">Sign in</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</header>

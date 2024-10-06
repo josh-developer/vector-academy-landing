@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* @import "node_modules/swiper/swiper-bundle.min.css"; */
 
 body {
@@ -61,6 +60,15 @@ body {
 .swiper-button-next::after {
   content: none !important;
 }
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 60px) !important
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, -60px) !important
+}
+
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 1;
@@ -74,7 +82,7 @@ body {
   background: linear-gradient(
     264deg,
     #9de8ee 0%,
-    #d1ab6f 39.41%,
+    #eed1a1 39.41%,
     #f17d21 78.57%
   );
   background-clip: text;
@@ -127,6 +135,7 @@ header {
   backdrop-filter: blur(18px);
   background-color: rgba(15, 15, 15, 0.4);
 }
+
 .shadow-el {
   position: absolute;
   width: 611px;
