@@ -15,7 +15,7 @@ declare const Swiper: any;
 export default class MainComponent implements OnInit {
   platformId = inject(PLATFORM_ID);
   dataService = inject(DataService);
-
+  commentsOfCourses = inject(DataService);
   titleText = signal('');
 
   ngOnInit(): void {

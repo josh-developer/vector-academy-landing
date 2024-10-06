@@ -2,7 +2,7 @@ export enum CourseStatus {
   ONGOING = 1,
   OPEN = 2,
   FINISHED = 3,
-  SOON = 4
+  SOON = 4,
 }
 
 export interface Course {
@@ -14,7 +14,7 @@ export interface Course {
   image: string;
   time: string;
   durationLesson: string;
-  status: CourseStatus,
+  status: CourseStatus;
   type: 'Onlayn' | 'Offlayn';
   link: string;
   mentor: Mentor;
@@ -25,7 +25,7 @@ export interface Mentor {
   title: string;
   company: string;
   image?: string;
-  socialMedia?: SocialMedia[],
+  socialMedia?: SocialMedia[];
   prevCompanies: PreviousCompany[];
 }
 
@@ -38,4 +38,10 @@ interface SocialMedia {
   href: string;
   imageSrc: string;
   altText: string;
+}
+export interface Comments {
+  id: number;
+  fullname: string;
+  courseName: string;
+  description: string;
 }

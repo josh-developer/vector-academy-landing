@@ -1,4 +1,4 @@
-import { Course, CourseStatus } from '../models/models';
+import { Course, Comments, CourseStatus } from '../models/models';
 
 export const data: Course[] = [
   {
@@ -62,7 +62,7 @@ export const data: Course[] = [
         {
           name: 'EPAM',
           logo: './images/png/epam.png',
-        },        
+        },
       ],
     },
   },
@@ -104,5 +104,20 @@ export const data: Course[] = [
         },
       ],
     },
+  },
+];
+export const commentsData: Comments[] = [
+  {
+    id: 1,
+    fullname: 'Akbar Israilov',
+    courseName: 'Frontint.uz',
+    description: 'Ilmiy koʻnikmalarimni rivojlantirishga sabab boʻlmoqda.',
+  },
+  {
+    id: 2,
+    fullname: 'Faxriddin Oripov',
+    courseName: 'Frontint.uz',
+    description:
+      'Intervyuga tayyorlanishda bilmagan koʻp narsalarimni oʻrgandim va bilganlarimni ishonch bilan gapira olishga yordam berdi.',
   },
 ];
